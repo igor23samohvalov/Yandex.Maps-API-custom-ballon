@@ -1,0 +1,127 @@
+h2 {
+  margin: 0px;
+  font-size: 16px;
+  color: #ff8663;
+  font-weight: bold;
+  font-family: "Fira Sans";
+}
+
+#balloon {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  width: 379px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#balloon .balloon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px 10px 0px 0px;
+  height: 45px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #ff8663;
+}
+
+#balloon-header-point {
+  flex-grow: 3;
+  padding: 15px;
+}
+
+#balloon-header-address {
+  flex-grow: 110;
+}
+
+#balloon-header-close {
+  flex-grow: 3;
+  padding: 15px;
+}
+
+
+#balloon .balloon-reviews {
+  height: 155px;
+  margin: 15px;
+  overflow: auto;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+#balloon .balloon-reviews-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+#balloon .balloon-reviews-container div{
+  display: flex;
+}
+
+#balloon .balloon-reviews-name, #balloon .balloon-reviews-place {
+  font-size: 16px;
+  color: #4f4f4f;
+  font-weight: bold;
+  font-family: "Fira Sans";
+  margin-right: 25px;
+  margin-bottom: 5px;
+}
+
+#balloon .balloon-reviews-place {
+
+  font-weight: 400;
+}
+
+#balloon .balloon-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 270px;
+  margin: 0px 15px 15px 15px;
+}
+
+input[type=text] {
+  width: 330px;
+  height: 27px;
+  padding: 5px 10px;
+  border-radius: 16px;
+  border: 1px solid #c4c4c4;
+}
+
+textarea {
+  width: 330px;
+  padding: 5px 10px;
+  border-radius: 16px;
+  border: 1px solid #c4c4c4;
+}
+
+button {
+  align-self: flex-end;
+  width: 87px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #ff8663;
+  color: #fff;
+  background-color: #ff8663;
+}
+
+.ballon_header { 
+  font-size: 14px; 
+  margin-top: 0; 
+  margin-bottom: 
+  10px; 
+  color: #708090; 
+}
+.ballon_body { 
+  font-size: 12px; 
+  text-align: left;
+  color: blue;
+  text-decoration: underline;
+}
+.ballon_footer { 
+  font-size: 12px; 
+  text-align: right; 
+  color: #7D7D7D; 
+  margin-top: 60px; 
+}

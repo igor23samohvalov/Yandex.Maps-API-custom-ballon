@@ -1,2 +1,1 @@
-# Yandex.Maps-API-custom-ballon
-Project is mostly based on final task of Loftschool Vanilla Javascript course. A custom ballon built on API, provided by Yandex.Maps.
+[![Maintainability](https://api.codeclimate.com/v1/badges/1e5c66e35ce3fdb17607/maintainability)](https://codeclimate.com/github/igor23samohvalov/Yandex.Maps-API-custom-ballon/maintainability)

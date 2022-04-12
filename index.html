@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yandex Maps Custom Balloon</title>
+  <script src="https://kit.fontawesome.com/39f8f848ca.js" crossorigin="anonymous"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=03917744-cd34-4d6f-ac30-c1b6bfd2efb3&lang=ru_RU" type="text/javascript">
+  </script>
+</head>
+<body>
+  <div id="map" style="width: 100vs; height: 100vh"></div>
+  <div id="balloon">
+    <div class="balloon-header">
+      <div id="balloon-header-point"><i class="fas fa-map-marker-alt"></i></div>
+      <div id="balloon-header-address"></div>
+      <div id="balloon-header-close"><i class="fas fa-times"></i></div>
+    </div>
+    <div class="balloon-reviews">
+      
+    </div>
+    <div class="balloon-form">
+        <h2>ВАШ ОТЗЫВ</h2>
+        <input type="text" id="inputName" name="name" placeholder="Ваше имя">
+        <input type="text" id="inputPlace" name="place" placeholder="Укажите место">
+        <textarea rows="6" id="inputComment" name="comment" form="balloon-review-form" placeholder="Поделитесь впечатлениями"></textarea>
+        <button id="submit-button">Добавить</button>
+    </div>
+  </div>
+</body>
+</html>
