@@ -1,6 +1,6 @@
-const balloonHeaderAddress = document.querySelector('#balloon-header-address');
-const balloon = document.querySelector('#balloon');
-const balloonReviews = document.querySelector('.balloon-reviews');
+const balloonHeaderAddress = document.querySelector('.address');
+const balloon = document.querySelector('.balloon');
+const balloonBody = document.querySelector('.balloon-body');
 const inputName = document.querySelector('#inputName');
 const inputPlace = document.querySelector('#inputPlace');
 const inputComment = document.querySelector('#inputComment');
@@ -11,6 +11,7 @@ function hideBalloon() {
 
 function getDate() {
   const now = new Date();
+
   return `${now.getFullYear()}.${now.getMonth()}.${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 }
 
@@ -21,20 +22,21 @@ function balloonClearFields() {
 }
 
 function addReview(data) {
-  balloonReviews.innerHTML += `
-    <div class='balloon-reviews-container'>
+  balloonBody.innerHTML += `
+    <div class='body-container'>
       <div>
-        <div class='balloon-reviews-name'>${data.name}</div>
-        <div class='balloon-reviews-place'>${data.place} ${data.date}</div>
+        <div class='name'>${data.name}</div>
+        <div class='place'>${data.place} ${data.date}</div>
       </div>
-      <div class='balloon-reviews-comment'>${data.comment}</div>
+      <div class='comment'>${data.comment}</div>
     </div>  
   `;
 }
 
 function loadReviews({ placeMarks, balloonState }) {
-  balloonReviews.innerHTML = '';
+  balloonBody.innerHTML = '';
   const currentMarks = placeMarks.filter(({ coords }) => coords.join('') === balloonState.coords.join(''));
+
   if (currentMarks.length !== 0) {
     currentMarks.forEach(({ review }) => {
       addReview(review);
@@ -45,15 +47,16 @@ function loadReviews({ placeMarks, balloonState }) {
 function openBalloon({ x, y, address }) {
   const clientY = document.documentElement.clientHeight;
   const clientX = document.documentElement.clientWidth;
-  if (clientY - y < 516) {
-    y = clientY - 516;
+
+  if (clientY - y < balloon.clientHeight) {
+    y = clientY - balloon.clientHeight;
   }
-  if (clientX - x < 379) {
-    x = clientX - 379;
+  if (clientX - x < balloon.clientWidth) {
+    x = clientX - balloon.clientWidth;
   }
 
   balloonHeaderAddress.textContent = address;
-  balloonReviews.innerHTML = '';
+  balloonBody.innerHTML = '';
   balloon.style.display = 'flex';
   balloon.style.left = `${x}px`;
   balloon.style.top = `${y}px`;

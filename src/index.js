@@ -1,4 +1,4 @@
-import './css/main.css';
+import './scss/app.scss';
 import view from './view.js';
 
 function init() {

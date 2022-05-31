@@ -1,15 +1,11 @@
 import balloon from './balloon.js';
 
-// function getIndex(placeMarks, currentCoords) {
-//   return placeMarks.map(({ coords }) => coords.join('')).indexOf(currentCoords.join(''));
-// }
-
 export default (state, watchedState, myMap) => {
   const inputName = document.querySelector('#inputName');
   const inputPlace = document.querySelector('#inputPlace');
   const addButton = document.querySelector('#submit-button');
   const inputComment = document.querySelector('#inputComment');
-  const closeButton = document.querySelector('#balloon-header-close');
+  const closeButton = document.querySelector('.close');
 
   myMap.events.add('click', (e) => {
     state.balloonState.coords = e.get('coords');
